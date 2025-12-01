@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const root = document.documentElement;
     const key = 'bdx_theme';
     const btn = document.getElementById('themeToggle');
@@ -75,6 +75,7 @@ function collect() {
     data.guildIds = getLines('guildIds');
     data.rootRoleIds = getLines('rootRoleIds');
     data.adminRoleIds = getLines('adminRoleIds');
+    data.adminChannelIds = getLines('adminChannelIds');
     data.caughtMessages = getLines('caughtMessages');
     data.wrongMessages = getLines('wrongMessages');
     data.spawnMessages = getLines('spawnMessages');
@@ -176,6 +177,15 @@ function generateFullYAML(data) {
     }
     yaml += `\n`;
 
+    yaml += `  # list of channel IDs where admins can bypass privacy settings, empty means no restriction\n`;
+    yaml += `  admin-channel-ids:\n`;
+    if (data.adminChannelIds && data.adminChannelIds.length > 0) {
+        data.adminChannelIds.forEach(id => {
+            yaml += `    - ${id}\n`;
+        });
+    }
+    yaml += `\n`;
+
     yaml += `# log channel for moderation actions\n`;
     yaml += `log-channel: ${data.logChannel || ''}\n\n`;
 
@@ -222,19 +232,25 @@ function generateFullYAML(data) {
             }
         });
     }
-
     yaml += `\n`;
+
+    yaml += `# extend the database registered models, useful for 3rd party packages\n`;
+    yaml += `extra-tortoise-models:\n\n`;
+
+    yaml += `# extend the Django admin panel with extra apps\n`;
+    yaml += `# you can also edit DJANGO_SETTINGS_MODULE for extended configuration\n`;
+    yaml += `extra-django-apps:\n\n`;
 
     yaml += `# prometheus metrics collection, leave disabled if you don't know what this is\n`;
     yaml += `prometheus:\n`;
     yaml += `  enabled: false\n`;
     yaml += `  host: "0.0.0.0"\n`;
-    yaml += `  port: 15260\n\n`;
+    yaml += `  port: 15260 \n\n`;
 
     yaml += `# spawn chance range\n`;
     yaml += `# with the default spawn manager, this is *approximately* the min/max number of minutes\n`;
     yaml += `# until spawning a countryball, before processing activity\n`;
-    yaml += `spawn-chance-range: [${data.spawnChanceMin || 40}, ${data.spawnChanceMax || 55}]\n\n`;
+    yaml += `spawn-chance-range: [${data.spawnChanceMin || 40}, ${data.spawnChanceMax || 55}] \n\n`;
 
     yaml += `spawn-manager: ballsdex.packages.countryballs.spawn.SpawnManager\n\n`;
 
@@ -245,10 +261,13 @@ function generateFullYAML(data) {
     yaml += `    environment: "production"\n\n`;
 
     yaml += `catch:\n`;
-    yaml += `  # Add any number of messages to each of these categories. The bot will select a random\n`;
-    yaml += `  # one each time.\n`;
-    yaml += `  # {user} is mention. {collectible} is collectible name. {ball} is ball name, and \n`;
-    yaml += `  # {collectibles} is collectible plural.\n\n`;
+    yaml += `  # Add messages to each category, one is chosen at random each time.\n\n`;
+    yaml += `  # KEYWORDS:\n`;
+    yaml += `  # - {user} will mention the user.\n`;
+    yaml += `  # - {collectible} is the collectible name.\n`;
+    yaml += `  # - {collectibles} is the plural collectible name.\n`;
+    yaml += `  # - {ball} is the spawned collectible's name\n`;
+    yaml += `  # - {emoji} is the collectible's emoji.\n\n`;
 
     yaml += `  # the label shown on the catch button\n`;
     yaml += `  catch_button_label: "${data.catchButtonLabel || 'Catch me!'}"\n\n`;
@@ -299,6 +318,7 @@ function generateFullYAML(data) {
     } else {
         yaml += `    - "{user} Sorry, this {collectible} was caught already!"\n`;
     }
+    yaml += `  \n`;
 
     return yaml;
 }
@@ -306,7 +326,7 @@ function generateFullYAML(data) {
 const fieldToYamlLine = {
     discordToken: 4,
     textPrefix: 7,
-    description: 15,
+    description: 14,
     githubLink: 18,
     discordInvite: 21,
     termsOfService: 23,
@@ -322,19 +342,20 @@ const fieldToYamlLine = {
     guildIds: 65,
     rootRoleIds: 68,
     adminRoleIds: 71,
-    logChannel: 74,
-    clientId: 90,
-    clientSecret: 92,
-    webhookUrl: 95,
-    adminPanelUrl: 99,
-    additionalPackages: 102,
-    catchButtonLabel: 137,
-    caughtMessages: 140,
-    wrongMessages: 146,
-    spawnMessages: 152,
-    slowMessages: 156,
-    spawnChanceMin: 120,
-    spawnChanceMax: 120
+    adminChannelIds: 74,
+    logChannel: 77,
+    clientId: 93,
+    clientSecret: 95,
+    webhookUrl: 98,
+    adminPanelUrl: 102,
+    additionalPackages: 105,
+    catchButtonLabel: 151,
+    caughtMessages: 154,
+    wrongMessages: 160,
+    spawnMessages: 166,
+    slowMessages: 170,
+    spawnChanceMin: 130,
+    spawnChanceMax: 130
 };
 let currentHighlight = null;
 function highlightYamlLine(line) {
@@ -465,7 +486,7 @@ resetBtn.addEventListener('click', () => {
 restore();
 render();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const validateConfigBtn = document.getElementById('validateConfigBtn');
     const shareConfigBtn = document.getElementById('shareConfigBtn');
     const tmaoHidden = document.getElementById('teamMembersAreOwners');
@@ -484,7 +505,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const multiNumFieldIds = [
         'guildIds',
         'rootRoleIds',
-        'adminRoleIds'
+        'rootRoleIds',
+        'adminRoleIds',
+        'adminChannelIds'
     ];
 
     numFieldIds.forEach(id => {
@@ -492,7 +515,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (el) {
             el.setAttribute('inputmode', 'numeric');
             el.setAttribute('pattern', '[0-9]*');
-            el.addEventListener('input', function(e) {
+            el.addEventListener('input', function (e) {
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         }
@@ -503,14 +526,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (el) {
             el.setAttribute('inputmode', 'numeric');
             el.setAttribute('pattern', '[0-9\n]*');
-            el.addEventListener('input', function(e) {
+            el.addEventListener('input', function (e) {
                 this.value = this.value.replace(/[^0-9\n]/g, '');
             });
         }
     });
 
     if (validateConfigBtn) {
-        validateConfigBtn.addEventListener('click', function() {
+        validateConfigBtn.addEventListener('click', function () {
             const data = collect();
             const yaml = generateFullYAML(data);
 
@@ -525,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (shareConfigBtn) {
-        shareConfigBtn.addEventListener('click', function() {
+        shareConfigBtn.addEventListener('click', function () {
             const data = collect();
 
             if (data.discordToken && data.discordToken.trim()) {
@@ -565,8 +588,8 @@ document.addEventListener('DOMContentLoaded', function() {
         tmaoFalseBtn.classList.toggle('primary', !isTrue);
     }
     if (tmaoHidden && tmaoTrueBtn && tmaoFalseBtn) {
-        tmaoTrueBtn.addEventListener('click', function() { tmaoHidden.value = 'true'; syncTeamMembersOwnersUI(); render(); });
-        tmaoFalseBtn.addEventListener('click', function() { tmaoHidden.value = 'false'; syncTeamMembersOwnersUI(); render(); });
+        tmaoTrueBtn.addEventListener('click', function () { tmaoHidden.value = 'true'; syncTeamMembersOwnersUI(); render(); });
+        tmaoFalseBtn.addEventListener('click', function () { tmaoHidden.value = 'false'; syncTeamMembersOwnersUI(); render(); });
         syncTeamMembersOwnersUI();
     }
 
@@ -607,6 +630,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mapped.guildIds = (admin['guild-ids'] || []).map(String);
         mapped.rootRoleIds = (admin['root-role-ids'] || []).map(String);
         mapped.adminRoleIds = (admin['admin-role-ids'] || []).map(String);
+        mapped.adminChannelIds = (admin['admin-channel-ids'] || []).map(String);
 
         mapped.logChannel = y['log-channel'] || '';
 
@@ -650,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const topKnown = new Set(['discord-token', 'text-prefix', 'about', 'collectible-name', 'plural-collectible-name', 'bot-name', 'players-group-cog-name', 'favorited-collectible-emoji', 'max-favorites', 'max-attack-bonus', 'max-health-bonus', 'admin-command', 'log-channel', 'owners', 'admin-panel', 'packages', 'prometheus', 'spawn-chance-range', 'spawn-manager', 'sentry', 'catch']);
 
         const aboutKnown = new Set(['description', 'github-link', 'discord-invite', 'terms-of-service', 'privacy-policy']);
-        const adminKnown = new Set(['guild-ids', 'root-role-ids', 'admin-role-ids']);
+        const adminKnown = new Set(['guild-ids', 'root-role-ids', 'admin-role-ids', 'admin-channel-ids']);
         const ownersKnown = new Set(['team-members-are-owners', 'co-owners']);
         const panelKnown = new Set(['client-id', 'client-secret', 'webhook-url', 'url']);
         const prometheusKnown = new Set(['enabled', 'host', 'port']);
@@ -739,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function validateConfiguration(data, options) {
-    const allowedVariables = ['{user}', '{ball}', '{collectible}', '{collectibles}', '{wrong}'];
+    const allowedVariables = ['{user}', '{ball}', '{collectible}', '{collectibles}', '{emoji}', '{wrong}'];
     const opts = Object.assign({ strictRequired: true }, options || {});
     const result = { isValid: true, errorMessage: '' };
 

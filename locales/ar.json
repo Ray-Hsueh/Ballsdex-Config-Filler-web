@@ -19,7 +19,7 @@
     "invalid_variables": "تم العثور على متغيرات غير صالحة في رسائل اللعبة",
     "user_in_spawn": "المتغير {user} غير مسموح به في رسائل الظهور",
     "unknown_variable": "تم العثور على متغير غير معروف: {variable}",
-    "allowed_variables": "يُسمح فقط بـ {user} و {ball} و {collectible} و {wrong}",
+    "allowed_variables": "يُسمح فقط بـ {user} و {ball} و {collectible} و {collectibles} و {emoji} و {wrong}",
     "invalid_format": "تنسيق غير صالح في {field}: يُسمح فقط بالحروف الصغيرة والأرقام والشرطة السفلية",
     "no_caps": "لا يُسمح بالحروف الكبيرة في {field}",
     "no_spaces": "لا يُسمح بالمسافات في {field}",
@@ -89,6 +89,9 @@
       "log_channel": "معرف قناة السجلات",
       "log_channel_placeholder": "معرف قناة السجلات",
       "log_channel_help": "أدخل معرف قناة Discord لسجلات الإشراف",
+      "admin_channel_ids": "معرفات قنوات المسؤول",
+      "admin_channel_ids_placeholder": "معرف قناة واحد في كل سطر",
+      "admin_channel_ids_help": "قائمة بمعرفات القنوات حيث يمكن للمسؤولين تجاوز إعدادات الخصوصية. اتركها فارغة لعدم وجود قيود.",
       "client_id": "معرف عميل تطبيق Discord",
       "client_secret": "سر عميل تطبيق Discord",
       "webhook_url": "رابط Webhook",
@@ -134,4 +137,4 @@
     "contestedwheel": "Some-BD-Tutorials من ContestedWheel",
     "ray": "حزم Ray"
   }
-} 
+}

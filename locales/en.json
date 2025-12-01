@@ -19,7 +19,7 @@
     "invalid_variables": "Invalid variables found in game messages",
     "user_in_spawn": "{user} variable is not allowed in spawn messages",
     "unknown_variable": "Unknown variable found: {variable}",
-    "allowed_variables": "Only {user}, {ball}, {collectible}, and {wrong} are allowed",
+    "allowed_variables": "Only {user}, {ball}, {collectible}, {collectibles}, {emoji} and {wrong} are allowed",
     "invalid_format": "Invalid format in {field}: only lowercase letters, numbers, and underscores are allowed",
     "no_caps": "No capital letters allowed in {field}",
     "no_spaces": "No spaces allowed in {field}",
@@ -89,6 +89,9 @@
       "log_channel": "Log Channel ID",
       "log_channel_placeholder": "Log channel ID",
       "log_channel_help": "Enter the Discord channel ID for moderation logs",
+      "admin_channel_ids": "Admin Channel IDs",
+      "admin_channel_ids_placeholder": "One channel ID per line",
+      "admin_channel_ids_help": "List of channel IDs where admins can bypass privacy settings. Empty means no restriction.",
       "client_id": "Discord Application Client ID",
       "client_secret": "Discord Application Client Secret",
       "webhook_url": "Webhook URL",
@@ -134,4 +137,4 @@
     "contestedwheel": "ContestedWheel's Some-BD-Tutorials",
     "ray": "Ray's Packages"
   }
-} 
+}

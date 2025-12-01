@@ -70,6 +70,9 @@ admin-command:
   # list of role IDs having partial access to /admin
   admin-role-ids:
 
+  # list of channel IDs where admins can bypass privacy settings, empty means no restriction
+  admin-channel-ids:
+
 # log channel for moderation actions
 log-channel:
 
@@ -108,6 +111,13 @@ packages:
   - ballsdex.packages.players
   - ballsdex.packages.trade
 
+# extend the database registered models, useful for 3rd party packages
+extra-tortoise-models:
+
+# extend the Django admin panel with extra apps
+# you can also edit DJANGO_SETTINGS_MODULE for extended configuration
+extra-django-apps:
+
 # prometheus metrics collection, leave disabled if you don't know what this is
 prometheus:
   enabled: false
@@ -128,10 +138,14 @@ sentry:
     environment: "production"
 
 catch:
-  # Add any number of messages to each of these categories. The bot will select a random
-  # one each time.
-  # {user} is mention. {collectible} is collectible name. {ball} is ball name, and 
-  # {collectibles} is collectible plural.
+  # Add messages to each category, one is chosen at random each time.
+
+  # KEYWORDS:
+  # - {user} will mention the user.
+  # - {collectible} is the collectible name.
+  # - {collectibles} is the plural collectible name.
+  # - {ball} is the spawned collectible's name
+  # - {emoji} is the collectible's emoji.
 
   # the label shown on the catch button
   catch_button_label: "Catch me!"

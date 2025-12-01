@@ -19,7 +19,7 @@
     "invalid_variables": "गेम संदेशों में अमान्य चर पाए गए",
     "user_in_spawn": "स्पॉन संदेशों में {user} चर की अनुमति नहीं है",
     "unknown_variable": "अज्ञात चर पाया गया: {variable}",
-    "allowed_variables": "केवल {user}, {ball}, {collectible}, और {wrong} की अनुमति है",
+    "allowed_variables": "केवल {user}, {ball}, {collectible}, {collectibles}, {emoji} और {wrong} की अनुमति है",
     "invalid_format": "{field} में अमान्य प्रारूप: केवल लोअरकेस अक्षर, संख्याएं और अंडरस्कोर की अनुमति है",
     "no_caps": "{field} में कैपिटल अक्षर की अनुमति नहीं है",
     "no_spaces": "{field} में स्पेस की अनुमति नहीं है",
@@ -87,6 +87,9 @@
       "log_channel": "लॉग चैनल आईडी",
       "log_channel_placeholder": "लॉग चैनल आईडी",
       "log_channel_help": "मॉडरेशन लॉग के लिए Discord चैनल आईडी दर्ज करें",
+      "admin_channel_ids": "एडमिन चैनल आईडी",
+      "admin_channel_ids_placeholder": "एक चैनल आईडी प्रति पंक्ति",
+      "admin_channel_ids_help": "चैनल आईडी की सूची जहां एडमिन गोपनीयता सेटिंग्स को बायपास कर सकते हैं। खाली का मतलब कोई प्रतिबंध नहीं है।",
       "client_id": "Discord एप्लिकेशन क्लाइंट आईडी",
       "client_secret": "Discord एप्लिकेशन क्लाइंट सीक्रेट",
       "webhook_url": "Webhook URL",
@@ -131,4 +134,4 @@
     "contestedwheel": "ContestedWheel के Some-BD-Tutorials",
     "ray": "Ray के Packages"
   }
-} 
+}

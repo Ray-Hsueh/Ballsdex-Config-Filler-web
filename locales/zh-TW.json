@@ -19,7 +19,7 @@
     "invalid_variables": "遊戲訊息中發現無效變數",
     "user_in_spawn": "生成訊息中不允許使用 {user} 變數",
     "unknown_variable": "發現未知變數：{variable}",
-    "allowed_variables": "只允許使用 {user}、{ball}、{collectible} 和 {wrong}",
+    "allowed_variables": "只允許使用 {user}、{ball}、{collectible}、{collectibles}、{emoji} 和 {wrong}",
     "invalid_format": "{field} 格式無效：只允許小寫字母、數字和底線",
     "no_caps": "{field} 中不允許使用大寫字母",
     "no_spaces": "{field} 中不允許使用空格",
@@ -89,6 +89,9 @@
       "log_channel": "log 頻道 ID",
       "log_channel_placeholder": "log 頻道 ID",
       "log_channel_help": "請輸入用於 log 的 Discord 頻道 ID",
+      "admin_channel_ids": "管理員頻道 ID",
+      "admin_channel_ids_placeholder": "每行一個頻道 ID",
+      "admin_channel_ids_help": "管理員可在此頻道繞過隱私設定。留空代表無限制。",
       "client_id": "Discord 應用程式 Client ID",
       "client_secret": "Discord 應用程式 Client Secret",
       "webhook_url": "Webhook 網址",
@@ -134,4 +137,4 @@
     "contestedwheel": "ContestedWheel的Some-BD-Tutorials",
     "ray": "Ray的Packages"
   }
-} 
+}

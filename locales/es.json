@@ -19,7 +19,7 @@
     "invalid_variables": "Se encontraron variables inválidas en los mensajes del juego",
     "user_in_spawn": "La variable {user} no está permitida en los mensajes de aparición",
     "unknown_variable": "Se encontró una variable desconocida: {variable}",
-    "allowed_variables": "Solo se permiten {user}, {ball}, {collectible} y {wrong}",
+    "allowed_variables": "Solo se permiten {user}, {ball}, {collectible}, {collectibles}, {emoji} y {wrong}",
     "invalid_format": "Formato inválido en {field}: solo se permiten letras minúsculas, números y guiones bajos",
     "no_caps": "No se permiten mayúsculas en {field}",
     "no_spaces": "No se permiten espacios en {field}",
@@ -89,6 +89,9 @@
       "log_channel": "ID del canal de registros",
       "log_channel_placeholder": "ID del canal de logs",
       "log_channel_help": "Introduce el ID del canal de Discord para los registros de moderación",
+      "admin_channel_ids": "IDs de canales de administración",
+      "admin_channel_ids_placeholder": "Un ID de canal por línea",
+      "admin_channel_ids_help": "Lista de IDs de canales donde los administradores pueden omitir la configuración de privacidad. Vacío significa sin restricciones.",
       "client_id": "Client ID de la aplicación de Discord",
       "client_secret": "Client Secret de la aplicación de Discord",
       "webhook_url": "URL del webhook",
@@ -134,4 +137,4 @@
     "contestedwheel": "Some-BD-Tutorials de ContestedWheel",
     "ray": "Paquetes de Ray"
   }
-} 
+}

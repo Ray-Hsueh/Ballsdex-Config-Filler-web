@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,18 +13,23 @@
   <script src="https://cdn.jsdelivr.net/npm/ajv@8/dist/ajv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 </head>
+
 <body>
   <div class="wrap">
     <header class="sitebar">
       <div class="brand" aria-label="BallsDex Config">
-        <div class="logo" aria-hidden="true"><img src="icon/favicon.ico" alt="Logo" style="width: 32px; height: 32px;" /></div>
+        <div class="logo" aria-hidden="true"><img src="icon/favicon.ico" alt="Logo"
+            style="width: 32px; height: 32px;" /></div>
         <div>
           <h1 data-i18n="app.title">BallsDex Config Filler</h1>
-          <small data-i18n-html="app.subtitle">Purely static. By <a href="https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web" target="_blank" rel="noopener">Ray Hsueh</a>.</small>
+          <small data-i18n-html="app.subtitle">Purely static. By <a
+              href="https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web" target="_blank" rel="noopener">Ray
+              Hsueh</a>.</small>
         </div>
       </div>
       <div class="hdr-actions">
-        <span class="pill" data-i18n-title="app.privacy" title="Tokens stay in your browser" data-i18n="app.privacy">Privacy: local-only</span>
+        <span class="pill" data-i18n-title="app.privacy" title="Tokens stay in your browser"
+          data-i18n="app.privacy">Privacy: local-only</span>
         <div class="sep" role="presentation"></div>
         <div class="lang" id="langCtl">
           <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
@@ -45,24 +51,36 @@
         <div class="sep" role="presentation"></div>
         <div class="switch" id="themeSwitch">
           <span aria-hidden="true">🌞</span>
-          <button class="toggle" id="themeToggle" data-i18n-aria-label="aria.toggle_theme" aria-label="Toggle theme" data-on="false"><span class="knob"></span></button>
+          <button class="toggle" id="themeToggle" data-i18n-aria-label="aria.toggle_theme" aria-label="Toggle theme"
+            data-on="false"><span class="knob"></span></button>
           <span aria-hidden="true">🌚</span>
         </div>
-        <a class="btn ghost" href="#" id="githubLinkBtn" data-i18n-aria-label="aria.open_github" aria-label="Open GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 .2A7.8 7.8 0 0 0 .1 8.1c0 3.4 2.2 6.2 5.2 7.2.4.1.5-.2.5-.4v-1.7c-2.1.5-2.6-1-2.6-1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.8 2.4.6.1-.5.3-.8.5-1-1.7-.2-3.4-.9-3.4-3.9 0-.9.3-1.6.8-2.2 0-.2-.4-1 .1-2.2 0 0 .7-.2 2.3.8.7-.2 1.4-.3 2.2-.3s1.5.1 2.2.3c1.6-1.1 2.3-.8 2.3-.8.5 1.2.2 2 .1 2.2.5.6.8 1.3.8 2.2 0 3-1.8 3.7-3.4 3.9.3.3.5.7.5 1.3v1.9c0 .2.1.5.5.4 3-1 5.2-3.8 5.2-7.2A7.8 7.8 0 0 0 8 .2z"/></svg></a>
+        <a class="btn ghost" href="#" id="githubLinkBtn" data-i18n-aria-label="aria.open_github"
+          aria-label="Open GitHub"><svg viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M8 .2A7.8 7.8 0 0 0 .1 8.1c0 3.4 2.2 6.2 5.2 7.2.4.1.5-.2.5-.4v-1.7c-2.1.5-2.6-1-2.6-1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.8 2.4.6.1-.5.3-.8.5-1-1.7-.2-3.4-.9-3.4-3.9 0-.9.3-1.6.8-2.2 0-.2-.4-1 .1-2.2 0 0 .7-.2 2.3.8.7-.2 1.4-.3 2.2-.3s1.5.1 2.2.3c1.6-1.1 2.3-.8 2.3-.8.5 1.2.2 2 .1 2.2.5.6.8 1.3.8 2.2 0 3-1.8 3.7-3.4 3.9.3.3.5.7.5 1.3v1.9c0 .2.1.5.5.4 3-1 5.2-3.8 5.2-7.2A7.8 7.8 0 0 0 8 .2z" />
+          </svg></a>
       </div>
     </header>
 
     <section class="hero" aria-labelledby="h-title">
       <div class="eyebrow" data-i18n="hero.eyebrow">No config.yml hand‑editing</div>
       <h2 class="title" id="h-title" data-i18n="hero.title">Generate a perfect config for your Ballsdex bot</h2>
-      <p class="subtitle" data-i18n-html="hero.subtitle_html">Export your <span class="kbd">config.yml</span>. If you have any questions, ask in <a href="https://discord.gg/pcqyRNjvua" target="_blank" rel="noopener">dev server</a>.</p>
+      <p class="subtitle" data-i18n-html="hero.subtitle_html">Export your <span class="kbd">config.yml</span>. If you
+        have any questions, ask in <a href="https://discord.gg/pcqyRNjvua" target="_blank" rel="noopener">dev
+          server</a>.</p>
     </section>
 
     <div class="upload-bar" id="uploadBar" aria-label="Upload config">
       <input type="file" id="uploadInput" accept=".yml,.yaml,text/yaml" hidden />
       <div class="upload-inner">
         <div class="upload-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17,8 12,3 7,8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+          </svg>
         </div>
         <div class="upload-text">
           <div class="upload-title" data-i18n="upload.title">Drop your config.yml here</div>
@@ -87,12 +105,19 @@
             <h3><span class="dot"></span> <span data-i18n="form.sections.basic">Basic</span></h3>
             <div class="grid-fields">
               <div class="col-6">
-                <label for="discordToken"><span data-i18n="form.fields.discord_token">Discord Bot Token</span> <span class="req">*</span></label>
-                <input type="password" id="discordToken" name="discordToken" data-i18n-placeholder="form.fields.discord_token_placeholder" placeholder="Paste your token" required />
-                <div class="help" data-i18n-html="form.fields.discord_token_help_html">From Discord Developer Portal (<a href="https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token" target="_blank" rel="noopener">How</a>)<br>If you prefer to paste the token directly into the file, you may leave this blank.</div>
+                <label for="discordToken"><span data-i18n="form.fields.discord_token">Discord Bot Token</span> <span
+                    class="req">*</span></label>
+                <input type="password" id="discordToken" name="discordToken"
+                  data-i18n-placeholder="form.fields.discord_token_placeholder" placeholder="Paste your token"
+                  required />
+                <div class="help" data-i18n-html="form.fields.discord_token_help_html">From Discord Developer Portal (<a
+                    href="https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token"
+                    target="_blank" rel="noopener">How</a>)<br>If you prefer to paste the token directly into the file,
+                  you may leave this blank.</div>
               </div>
               <div class="col-6">
-                <label for="textPrefix"><span data-i18n="form.fields.text_prefix">Text Command Prefix</span> <span class="req">*</span></label>
+                <label for="textPrefix"><span data-i18n="form.fields.text_prefix">Text Command Prefix</span> <span
+                    class="req">*</span></label>
                 <input type="text" id="textPrefix" name="textPrefix" value="b." />
                 <div class="help" data-i18n="form.fields.text_prefix_help">Prefix for legacy text commands</div>
               </div>
@@ -103,23 +128,31 @@
             <h3><span class="dot"></span> <span data-i18n="form.sections.about">About</span></h3>
             <div class="grid-fields">
               <div class="col-12">
-                <label for="description"><span data-i18n="form.fields.description">Description</span> <span class="req">*</span></label>
-                <textarea id="description" name="description" rows="3">Collect countryballs on Discord, exchange them and battle with friends!</textarea>
+                <label for="description"><span data-i18n="form.fields.description">Description</span> <span
+                    class="req">*</span></label>
+                <textarea id="description" name="description"
+                  rows="3">Collect countryballs on Discord, exchange them and battle with friends!</textarea>
               </div>
               <div class="col-6">
-                <label for="githubLink"><span data-i18n="form.fields.github_link">GitHub Link</span> <span class="req">*</span></label>
-                <input type="url" id="githubLink" name="githubLink" value="https://github.com/laggron42/BallsDex-DiscordBot" />
+                <label for="githubLink"><span data-i18n="form.fields.github_link">GitHub Link</span> <span
+                    class="req">*</span></label>
+                <input type="url" id="githubLink" name="githubLink"
+                  value="https://github.com/laggron42/BallsDex-DiscordBot" />
               </div>
               <div class="col-6">
-                <label for="discordInvite"><span data-i18n="form.fields.discord_invite">Discord Invite Link</span> <span class="req">*</span></label>
-                <input type="url" id="discordInvite" name="discordInvite" placeholder="https://discord.gg/YOUR_INVITE_CODE" />
+                <label for="discordInvite"><span data-i18n="form.fields.discord_invite">Discord Invite Link</span> <span
+                    class="req">*</span></label>
+                <input type="url" id="discordInvite" name="discordInvite"
+                  placeholder="https://discord.gg/YOUR_INVITE_CODE" />
               </div>
               <div class="col-6">
-                <label for="termsOfService"><span data-i18n="form.fields.terms">Terms of Service</span> <span class="req">*</span></label>
+                <label for="termsOfService"><span data-i18n="form.fields.terms">Terms of Service</span> <span
+                    class="req">*</span></label>
                 <input type="url" id="termsOfService" name="termsOfService" placeholder="https://your-terms.com" />
               </div>
               <div class="col-6">
-                <label for="privacyPolicy"><span data-i18n="form.fields.privacy">Privacy Policy</span> <span class="req">*</span></label>
+                <label for="privacyPolicy"><span data-i18n="form.fields.privacy">Privacy Policy</span> <span
+                    class="req">*</span></label>
                 <input type="url" id="privacyPolicy" name="privacyPolicy" placeholder="https://your-privacy.com" />
               </div>
             </div>
@@ -129,23 +162,28 @@
             <h3><span class="dot"></span> <span data-i18n="form.sections.game">Game</span></h3>
             <div class="grid-fields">
               <div class="col-6">
-                <label for="collectibleName"><span data-i18n="form.fields.collectible_name">Collectible Name</span> <span class="req">*</span></label>
+                <label for="collectibleName"><span data-i18n="form.fields.collectible_name">Collectible Name</span>
+                  <span class="req">*</span></label>
                 <input type="text" id="collectibleName" name="collectibleName" value="countryball" />
               </div>
               <div class="col-6">
-                <label for="pluralCollectibleName"><span data-i18n="form.fields.plural_collectible_name">Plural Collectible Name</span> <span class="req">*</span></label>
+                <label for="pluralCollectibleName"><span data-i18n="form.fields.plural_collectible_name">Plural
+                    Collectible Name</span> <span class="req">*</span></label>
                 <input type="text" id="pluralCollectibleName" name="pluralCollectibleName" value="countryballs" />
               </div>
               <div class="col-6">
-                <label for="botName"><span data-i18n="form.fields.bot_name">Bot Name</span> <span class="req">*</span></label>
+                <label for="botName"><span data-i18n="form.fields.bot_name">Bot Name</span> <span
+                    class="req">*</span></label>
                 <input type="text" id="botName" name="botName" value="BallsDex" />
               </div>
               <div class="col-6">
-                <label for="playersGroupCogName"><span data-i18n="form.fields.players_group">Players Group Command Name</span> <span class="req">*</span></label>
+                <label for="playersGroupCogName"><span data-i18n="form.fields.players_group">Players Group Command
+                    Name</span> <span class="req">*</span></label>
                 <input type="text" id="playersGroupCogName" name="playersGroupCogName" value="balls" />
               </div>
               <div class="col-6">
-                <label for="favoritedCollectibleEmoji" data-i18n="form.fields.fav_emoji">Favorited Collectible Emoji</label>
+                <label for="favoritedCollectibleEmoji" data-i18n="form.fields.fav_emoji">Favorited Collectible
+                  Emoji</label>
                 <input type="text" id="favoritedCollectibleEmoji" name="favoritedCollectibleEmoji" value="❤️" />
               </div>
               <div class="col-6">
@@ -167,25 +205,54 @@
             <h3><span class="dot"></span> <span data-i18n="form.sections.admin">Admin</span></h3>
             <div class="grid-fields">
               <div class="col-12">
-                <label for="guildIds"><span data-i18n="form.fields.guild_ids">Guild IDs</span> <span class="req">*</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
-                <textarea id="guildIds" name="guildIds" rows="3" data-i18n-placeholder="form.fields.guild_ids_placeholder" placeholder="One ID per line"></textarea>
+                <label for="guildIds"><span data-i18n="form.fields.guild_ids">Guild IDs</span> <span
+                    class="req">*</span> <a data-i18n="common.how"
+                    href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="guildIds" name="guildIds" rows="3"
+                  data-i18n-placeholder="form.fields.guild_ids_placeholder" placeholder="One ID per line"></textarea>
                 <div class="help" data-i18n="form.fields.lines_to_items">Each line becomes one item</div>
               </div>
               <div class="col-6">
-                <label for="rootRoleIds"><span data-i18n="form.fields.root_roles">Root Admin Role IDs</span> <span class="req">*</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
-                <textarea id="rootRoleIds" name="rootRoleIds" rows="3" data-i18n-placeholder="form.fields.roles_placeholder" placeholder="One role ID per line"></textarea>
+                <label for="rootRoleIds"><span data-i18n="form.fields.root_roles">Root Admin Role IDs</span> <span
+                    class="req">*</span> <a data-i18n="common.how"
+                    href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="rootRoleIds" name="rootRoleIds" rows="3"
+                  data-i18n-placeholder="form.fields.roles_placeholder" placeholder="One role ID per line"></textarea>
               </div>
               <div class="col-6">
-                <label for="adminRoleIds"><span data-i18n="form.fields.admin_roles">Admin Role IDs</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
-                <textarea id="adminRoleIds" name="adminRoleIds" rows="3" data-i18n-placeholder="form.fields.roles_placeholder" placeholder="One role ID per line"></textarea>
+                <label for="adminRoleIds"><span data-i18n="form.fields.admin_roles">Admin Role IDs</span> <a
+                    data-i18n="common.how"
+                    href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="adminRoleIds" name="adminRoleIds" rows="3"
+                  data-i18n-placeholder="form.fields.roles_placeholder" placeholder="One role ID per line"></textarea>
+              </div>
+              <div class="col-12">
+                <label for="adminChannelIds"><span data-i18n="form.fields.admin_channel_ids">Admin Channel IDs</span> <a
+                    data-i18n="common.how"
+                    href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="adminChannelIds" name="adminChannelIds" rows="3"
+                  data-i18n-placeholder="form.fields.admin_channel_ids_placeholder"
+                  placeholder="One channel ID per line"></textarea>
+                <div class="help" data-i18n="form.fields.admin_channel_ids_help">List of channel IDs where admins can
+                  bypass privacy settings. Empty means no restriction.</div>
               </div>
               <div class="col-6">
-                <label for="logChannel"><span data-i18n="form.fields.log_channel">Log Channel ID</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
-                <input type="text" id="logChannel" name="logChannel" data-i18n-placeholder="form.fields.log_channel_placeholder" placeholder="Log channel ID" />
-                <div class="help" data-i18n="form.fields.log_channel_help">Enter the Discord channel ID for moderation logs</div>
+                <label for="logChannel"><span data-i18n="form.fields.log_channel">Log Channel ID</span> <a
+                    data-i18n="common.how"
+                    href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <input type="text" id="logChannel" name="logChannel"
+                  data-i18n-placeholder="form.fields.log_channel_placeholder" placeholder="Log channel ID" />
+                <div class="help" data-i18n="form.fields.log_channel_help">Enter the Discord channel ID for moderation
+                  logs</div>
               </div>
               <div class="col-6">
-                <label for="teamMembersAreOwners"><span data-i18n="form.fields.team_members_are_owners">Team members are owners</span></label>
+                <label for="teamMembersAreOwners"><span data-i18n="form.fields.team_members_are_owners">Team members are
+                    owners</span></label>
                 <input type="hidden" id="teamMembersAreOwners" name="teamMembersAreOwners" value="false" />
                 <div class="toggle-group" role="group" aria-label="Team members are owners">
                   <button class="btn" type="button" id="tmaoTrueBtn" data-i18n="common.true">True</button>
@@ -196,18 +263,26 @@
           </div>
 
           <div class="section">
-            <h3><span class="dot"></span> <span data-i18n="form.sections.admin_panel">Admin Panel</span> <small style="font-weight:normal;color:#888;" data-i18n="form.fields.optional">optional</small></h3>
+            <h3><span class="dot"></span> <span data-i18n="form.sections.admin_panel">Admin Panel</span> <small
+                style="font-weight:normal;color:#888;" data-i18n="form.fields.optional">optional</small></h3>
             <div class="grid-fields">
               <div class="col-6">
-                <label for="clientId"><span data-i18n="form.fields.client_id">Discord Application Client ID</span> <a data-i18n="common.how" href="https://support.heateor.com/discord-client-id-discord-client-secret/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <label for="clientId"><span data-i18n="form.fields.client_id">Discord Application Client ID</span> <a
+                    data-i18n="common.how" href="https://support.heateor.com/discord-client-id-discord-client-secret/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
                 <input type="text" id="clientId" name="clientId" />
               </div>
               <div class="col-6">
-                <label for="clientSecret"><span data-i18n="form.fields.client_secret">Discord Application Client Secret</span> <a data-i18n="common.how" href="https://support.heateor.com/discord-client-id-discord-client-secret/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <label for="clientSecret"><span data-i18n="form.fields.client_secret">Discord Application Client
+                    Secret</span> <a data-i18n="common.how"
+                    href="https://support.heateor.com/discord-client-id-discord-client-secret/" target="_blank"
+                    rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
                 <input type="password" id="clientSecret" name="clientSecret" />
               </div>
               <div class="col-6">
-                <label for="webhookUrl"><span data-i18n="form.fields.webhook_url">Webhook URL</span> <a data-i18n="common.how" href="https://support.heateor.com/discord-client-id-discord-client-secret/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <label for="webhookUrl"><span data-i18n="form.fields.webhook_url">Webhook URL</span> <a
+                    data-i18n="common.how" href="https://support.heateor.com/discord-client-id-discord-client-secret/"
+                    target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
                 <input type="url" id="webhookUrl" name="webhookUrl" />
               </div>
               <div class="col-6">
@@ -218,19 +293,25 @@
           </div>
 
           <div class="section">
-            <h3><span class="dot"></span> <span data-i18n="form.sections.packages">Packages</span> <small style="font-weight:normal;color:#888;" data-i18n="form.fields.optional">optional</small></h3>
+            <h3><span class="dot"></span> <span data-i18n="form.sections.packages">Packages</span> <small
+                style="font-weight:normal;color:#888;" data-i18n="form.fields.optional">optional</small></h3>
             <div class="grid-fields">
               <div class="col-12">
                 <label for="additionalPackages" data-i18n="form.fields.additional_packages">Additional Packages</label>
-                <textarea id="additionalPackages" name="additionalPackages" rows="4" data-i18n-placeholder="form.fields.additional_packages_placeholder"></textarea>
-                <div class="help" data-i18n="form.fields.packages_help">Enter additional package names without the "ballsdex.packages." prefix. The default packages will always be included.</div>
+                <textarea id="additionalPackages" name="additionalPackages" rows="4"
+                  data-i18n-placeholder="form.fields.additional_packages_placeholder"></textarea>
+                <div class="help" data-i18n="form.fields.packages_help">Enter additional package names without the
+                  "ballsdex.packages." prefix. The default packages will always be included.</div>
               </div>
             </div>
           </div>
 
           <div class="section">
             <h3><span class="dot"></span> <span data-i18n="form.sections.game_messages">Game Messages</span></h3>
-            <div class="note" style="font-size:0.95em;color:#888;margin-bottom:8px;"><span data-i18n="form.fields.available_vars">Available variables:</span> <span class="kbd">{user}</span> <span class="kbd">{ball}</span> <span class="kbd">{collectible}</span> <span class="kbd">{collectibles}</span><span class="kbd">{wrong}</span></div>
+            <div class="note" style="font-size:0.95em;color:#888;margin-bottom:8px;"><span
+                data-i18n="form.fields.available_vars">Available variables:</span> <span class="kbd">{user}</span> <span
+                class="kbd">{ball}</span> <span class="kbd">{collectible}</span> <span class="kbd">{collectibles}</span>
+              <span class="kbd">{emoji}</span> <span class="kbd">{wrong}</span></div>
             <div class="grid-fields">
               <div class="col-6">
                 <label for="spawnChanceMin" data-i18n="form.fields.spawn_min">Spawn Chance Min (minutes)</label>
@@ -247,22 +328,27 @@
               <div class="col-12">
                 <label for="caughtMessages" data-i18n="form.fields.caught_success">Caught Success Message</label>
                 <textarea id="caughtMessages" name="caughtMessages" rows="2">{user} You caught **{ball}**!</textarea>
-                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.</div>
+                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.
+                </div>
               </div>
               <div class="col-12">
                 <label for="wrongMessages" data-i18n="form.fields.wrong_msg">Wrong Name Message</label>
                 <textarea id="wrongMessages" name="wrongMessages" rows="2">{user} Wrong name!</textarea>
-                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.</div>
+                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.
+                </div>
               </div>
               <div class="col-12">
                 <label for="spawnMessages" data-i18n="form.fields.spawn_msg">Spawn Message</label>
                 <textarea id="spawnMessages" name="spawnMessages" rows="2">A wild {collectible} appeared!</textarea>
-                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.</div>
+                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.
+                </div>
               </div>
               <div class="col-12">
                 <label for="slowMessages" data-i18n="form.fields.slow_msg">Too Slow Message</label>
-                <textarea id="slowMessages" name="slowMessages" rows="2">{user} Sorry, this {collectible} was caught already!</textarea>
-                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.</div>
+                <textarea id="slowMessages" name="slowMessages"
+                  rows="2">{user} Sorry, this {collectible} was caught already!</textarea>
+                <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.
+                </div>
               </div>
             </div>
           </div>
@@ -274,7 +360,8 @@
           <p data-i18n-html="callout.after_html"></p>
         </div>
         <div class="actions actions-bottom">
-          <button class="btn primary" id="downloadBtn" type="button" data-i18n="form.fields.download_config">Download config.yml</button>
+          <button class="btn primary" id="downloadBtn" type="button" data-i18n="form.fields.download_config">Download
+            config.yml</button>
         </div>
       </article>
 
@@ -283,7 +370,8 @@
           <strong data-i18n="preview.file">config.yml</strong>
           <div class="toolbar">
             <button class="btn-icon" id="copyYamlBtn" type="button" aria-label="Copy YAML" title="Copy YAML">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
@@ -317,17 +405,22 @@
             </span>
           </div>
         </div>
-        <p class="note" data-i18n="app.tip_download">Tip: Press <span class="kbd">Ctrl</span> + <span class="kbd">S</span> to download.</p>
+        <p class="note" data-i18n="app.tip_download">Tip: Press <span class="kbd">Ctrl</span> + <span
+            class="kbd">S</span> to download.</p>
         <div class="preview-footer">
           <div class="quick-actions">
-            <button class="btn-ghost" id="validateConfigBtn" type="button" data-i18n-title="validation.validate" title="Validation check">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <button class="btn-ghost" id="validateConfigBtn" type="button" data-i18n-title="validation.validate"
+              title="Validation check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20,6 9,17 4,12"></polyline>
               </svg>
               <span data-i18n="validation.validate">Validation check</span>
             </button>
-            <button class="btn-ghost" id="shareConfigBtn" type="button" data-i18n-title="validation.share" title="Share">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <button class="btn-ghost" id="shareConfigBtn" type="button" data-i18n-title="validation.share"
+              title="Share">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="18" cy="5" r="3"></circle>
                 <circle cx="6" cy="12" r="3"></circle>
                 <circle cx="18" cy="19" r="3"></circle>
@@ -341,11 +434,13 @@
           <div class="external-links">
             <p class="links-title" data-i18n="links.title"></p>
             <div class="links-grid">
-              <a href="https://github.com/ContestedWheel/Some-BD-Tutorials/wiki" target="_blank" rel="noopener" class="link-card">
+              <a href="https://github.com/ContestedWheel/Some-BD-Tutorials/wiki" target="_blank" rel="noopener"
+                class="link-card">
                 <span class="link-name" data-i18n="links.contestedwheel"></span>
                 <span class="link-url">github.com/ContestedWheel/Some-BD-Tutorials/wiki</span>
               </a>
-              <a href="https://github.com/Ray-Hsueh/Ballsdex-Rays-Packages" target="_blank" rel="noopener" class="link-card">
+              <a href="https://github.com/Ray-Hsueh/Ballsdex-Rays-Packages" target="_blank" rel="noopener"
+                class="link-card">
                 <span class="link-name" data-i18n="links.ray"></span>
                 <span class="link-url">github.com/Ray-Hsueh/Ballsdex-Rays-Packages</span>
               </a>
@@ -356,7 +451,9 @@
     </div>
 
     <footer class="foot">
-      <span data-i18n="footer.notice">The generated</span> <span class="kbd">config.yml</span> <span data-i18n="footer.notice_tail">may be outdated. Please manually cross-check it with the program-generated file to ensure accuracy.</span>
+      <span data-i18n="footer.notice">The generated</span> <span class="kbd">config.yml</span> <span
+        data-i18n="footer.notice_tail">may be outdated. Please manually cross-check it with the program-generated file
+        to ensure accuracy.</span>
     </footer>
   </div>
 
@@ -375,4 +472,5 @@
   <script defer src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

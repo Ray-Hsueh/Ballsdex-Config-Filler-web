@@ -19,7 +19,7 @@
     "invalid_variables": "ゲームメッセージに無効な変数が見つかりました",
     "user_in_spawn": "スポーンメッセージで{user}変数は使用できません",
     "unknown_variable": "不明な変数が見つかりました：{variable}",
-    "allowed_variables": "{user}、{ball}、{collectible}、{wrong}のみ使用可能です",
+    "allowed_variables": "{user}、{ball}、{collectible}、{collectibles}、{emoji}、{wrong}のみ使用可能です",
     "invalid_format": "{field}の形式が無効です：小文字、数字、アンダースコアのみ使用可能です",
     "no_caps": "{field}で大文字は使用できません",
     "no_spaces": "{field}でスペースは使用できません",
@@ -89,6 +89,9 @@
       "log_channel": "ログチャンネルID",
       "log_channel_placeholder": "ログチャンネルID",
       "log_channel_help": "モデレーションログ用のDiscordチャンネルIDを入力",
+      "admin_channel_ids": "管理者チャンネルID",
+      "admin_channel_ids_placeholder": "1行に1つのチャンネルID",
+      "admin_channel_ids_help": "管理者がプライバシー設定を回避できるチャンネルIDのリスト。空の場合は制限なし。",
       "client_id": "DiscordアプリケーションクライアントID",
       "client_secret": "Discordアプリケーションクライアントシークレット",
       "webhook_url": "Webhook URL",
@@ -134,4 +137,4 @@
     "contestedwheel": "ContestedWheelのSome-BD-Tutorials",
     "ray": "RayのPackages"
   }
-} 
+}
