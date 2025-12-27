@@ -40,7 +40,7 @@
   "hero": {
     "eyebrow": "Sin editar config.yml a mano",
     "title": "Genera una configuración perfecta para tu bot de Ballsdex",
-    "subtitle_html": "Exporta tu <span class=\"kbd\">config.yml</span>. Si tienes dudas, pregunta en el <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">servidor de desarrollo</a>."
+    "subtitle_html": "Exporta tu <span class=\"kbd\">config.yml</span>. Si tienes dudas, pregunta en el <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">servidor de desarrollo</a>. <span class=\"donation-highlight\">Si te resulta útil, considera <a href=\"https://ko-fi.com/rayhsueh\" target=\"_blank\" rel=\"noopener\">apoyarme en Ko-fi</a>.</span>"
   },
   "upload": {
     "title": "¿Ya tienes un config? Impórtalo aquí para autocompletar el formulario de abajo.",

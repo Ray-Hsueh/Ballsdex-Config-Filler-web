@@ -40,7 +40,7 @@
   "hero": {
     "eyebrow": "کوئی config.yml ہاتھ سے ترمیم نہیں",
     "title": "اپنے Ballsdex بوٹ کے لیے مکمل کنفیگ بنائیں",
-    "subtitle_html": "اپنی <span class=\"kbd\">config.yml</span> برآمد کریں۔ اگر آپ کے کوئی سوالات ہیں تو <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">ڈیو سرور</a> میں پوچھیں۔"
+    "subtitle_html": "اپنی <span class=\"kbd\">config.yml</span> برآمد کریں۔ اگر آپ کے کوئی سوالات ہیں تو <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">ڈیو سرور</a> میں پوچھیں۔ <span class=\"donation-highlight\">اگر آپ کو یہ مفید لگے، تو براہ کرم <a href=\"https://ko-fi.com/rayhsueh\" target=\"_blank\" rel=\"noopener\">Ko-fi پر میری مدد کرنے</a> پر غور کریں۔</span>"
   },
   "upload": {
     "title": "کیا پہلے سے کنفیگ موجود ہے؟ اسے یہاں امپورٹ کریں تاکہ نیچے والا فارم خود بخود بھر جائے۔",

@@ -40,7 +40,7 @@
   "hero": {
     "eyebrow": "لا تحرير يدوي لـ config.yml",
     "title": "أنشئ إعدادات مثالية لروبوت Ballsdex الخاص بك",
-    "subtitle_html": "صدّر ملف <span class=\"kbd\">config.yml</span> الخاص بك. إذا كان لديك أي أسئلة، اسأل في <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">خادم المطورين</a>."
+    "subtitle_html": "صدّر ملف <span class=\"kbd\">config.yml</span> الخاص بك. إذا كان لديك أي أسئلة، اسأل في <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">خادم المطورين</a>. <span class=\"donation-highlight\">إذا وجدت هذا مفيدًا، يرجى التفكير في <a href=\"https://ko-fi.com/rayhsueh\" target=\"_blank\" rel=\"noopener\">دعمي على Ko-fi</a>.</span>"
   },
   "upload": {
     "title": "هل لديك ملف إعداد سابقاً؟ قم باستيراده هنا لتعبئة النموذج تلقائياً.",

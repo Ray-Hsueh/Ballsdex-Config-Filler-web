@@ -40,7 +40,7 @@
   "hero": {
     "eyebrow": "config.ymlの手動編集不要",
     "title": "Ballsdexボット用の完璧な設定を生成",
-    "subtitle_html": "<span class=\"kbd\">config.yml</span>をエクスポート。ご質問がある場合は<a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開発サーバー</a>でお聞きください。"
+    "subtitle_html": "<span class=\"kbd\">config.yml</span>をエクスポート。ご質問がある場合は<a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開発サーバー</a>でお聞きください。<span class=\"donation-highlight\">役に立った場合は、<a href=\"https://ko-fi.com/rayhsueh\" target=\"_blank\" rel=\"noopener\">Ko-fiでのサポート</a>をご検討ください。</span>"
   },
   "upload": {
     "title": "すでに設定がありますか？ ここでインポートすると下のフォームが自動入力されます。",
